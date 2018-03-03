@@ -1,0 +1,153 @@
+
+#echo "fr_FR"
+
+messages=(
+
+    ["partyman_version"]="Version de partyman"
+    ["gathering_info"]="Rassemblement d'information, merci de patienter... "
+    ["done"]=" Fait !"
+    ["exiting"]="Parti."
+
+    ["days"]="jours"
+    ["hours"]="heures"
+    ["mins"]="mins"
+    ["secs"]="secs"
+
+    ["YES"]="OUI"
+    ["NO"]="NON"
+    ["FAILED"]="A ECHOUE!"
+
+    ["not_implemented"]="Cette fonctionnalité n'est pas implémentée !"
+    ["prompt_are_you_sure"]="Etes-vous sûr ?"
+    ["prompt_ipv4_ipv6"]="L'hôte a, à la fois, des adresses IPv4 et IPv6.\n - Utiliser l'adresse IPv6 pour l'installation ?"
+
+    ["download"]="télécharger"
+    ["downloading"]="En cours de téléchargement"
+    ["creating"]="Créer"
+    ["checksum"]="checksum"
+    ["checksumming"]="Vérification du checksum"
+    ["unpacking"]="Dé-packaging"
+    ["stopping"]="Arrêt en cours"
+    ["removing_old_version"]="Suppression de l'ancienne version... "
+    ["please_wait"]="Merci de patienter..."
+    ["try_again_later"]="Ré-essayer plus tard."
+    ["launching"]="Lancement"
+    ["bootstrapping"]="Bootstrapping"
+    ["unzipping"]="Dé-zippage"
+    ["waiting_for_particld_to_respond"]="En attente que particld réponde... "
+    ["deleting_cache_files"]="Suppression des fichiers de cache, de debug.log, ... "
+    ["starting_particld"]="Démarrage de particld... "
+
+    ["err_downloading_file"]="Erreur lors du téléchargement du fichier"
+    ["err_tried_to_get"]="A essayé d'avoir"
+    ["err_no_pkg_mgr"]="Ne peut pas déterminer le gestionnaire de palteformes/paquets"
+    ["err_missing_dependency"]="dépendance manquante:"
+    ["err_unknown_platform"]="Plateforme inconnue:"
+    ["err_partyman_supports"]="Partyman supporte actuellement 32/64bit linux et 32/64bit arm/aarch"
+    ["err_could_not_get_version"]="Ne trouve pas les sources de dernières versions"
+    ["err_failed_ip_resolve"]="Echec dans la résolution de l'IP publique. Nouvel essai... "
+
+    ["newer_particl_available"]="A version plus récente de particl est disponible."
+    ["successfully_upgraded"]="Particl a correctement monté de version"
+    ["successfully_installed"]="Installation réussie !"
+    ["installed_in"]="A été installé"
+    ["particl_version"]="Version de particl"
+    ["is_not_uptodate"]="n'est pas à jour."
+    ["is_uptodate"]="est à jour."
+    ["preexisting_dir"]="Dossier pré-existant"
+    ["run_reinstall"]="Lancer 'partyman reinstall' pour écrire par dessus."
+    ["reinstall_to"]="Réinstaller dans"
+    ["and_install_to"]="et installer dans"
+
+    ["exec_found_in_system_dir"]="Des executables de particl executables ont été trouvé dans le system dir"
+    ["run_partyman_as_root"]=". Lancer partyman en tant que root (Commande sudo partyman) pour continuer."
+    ["particld_not_found"]="particld pas trouvé"
+    ["particlcli_not_found"]="particl-cli pas trouvé"
+    ["particlcli_not_found_in_cwd"]="Ne trouve pas particl-cli dans le dossier actuel"
+
+    ["sync_to_github"]="Synchroniser partyman avec Github maintenant ?"
+
+    ["usage"]="USAGE"
+    ["commands"]="COMMANDES"
+    ["usage_title"]="installe, met à jour et gère les particl daemons à utilisateur unique et les porte-feuilles"
+    ["usage_install_description"]="installe, met à jour et gère les particl daemons à utilisateur unique et les porte-feuilles"
+    ["usage_update_description"]="Met à jour Particl à la version la plus récente, puis relance"
+    ["usage_restart_description"]="Relance particld et efface:"
+    ["usage_restart_description_now"]="Attendra l'activation par l'utilisateur si on ne donne par d'argument 'now'"
+    ["usage_status_description"]="Rassemble des sources locales et web et affiche le status actuel"
+    ["usage_sync_description"]="Met à jour Particl à la version la plus récente du Github"
+    ["usage_branch_description"]="Oriente partyman vers une branche alternative/experimentale du Github"
+    ["usage_reinstall_description"]="Surcharge particl avec la version la plus récente, et relance"
+    ["usage_version_description"]="Indique le numéro de version de partyman puis sorts"
+    ["usage_stakingnode_description"]="Affiche les clés publiques actuelles sur ce noeud de staking Particl daemon"
+    ["usage_stakingnode_init_description"]="[init] Crée un nouveau porte-feuille"
+    ["usage_stakingnode_new_description"]="[new] Crée une nouvelle clé publique à utiliser avec votre porte-feuille de cold staking"
+    ["usage_stakingnode_stats_description"]="[stats] Affiche les gains du noeud de staking"
+    ["usage_stakingnode_rewardaddress_description"]="[rewardaddress] Configure l'adresse particl de réception des gains du staking"
+
+    ["usage_firewall_description"]="installe et configure le pare-feu UFW et ouvre les ports 22, 8080, 51738 et 51938"
+    ["usage_firewall_reset"]="Désactive le pare-feu UFW et réinstalle les règles par défaut"
+
+
+    ["to_start_particl"]="Pour démarrer particld lancer:"
+
+    ["quit_uptodate"]="A jour."
+
+    ["requires_updating"]="A besoin d'être mis à jour. La version la plus récente est :"
+    ["requires_sync"]="Faire 'git pull' manuellement ou télécharger la version à jour."
+
+    ["no_forks_detected"]="Aucun fork n'a été détecté"
+
+    # space aligned strings. pay attention to spaces!
+    ["currnt_version"]="  version actuelle : "
+    ["latest_version"]="   version la plus récente : "
+
+    ["status_hostnam"]="  Nom de l'hôte                    : "
+    ["status_uptimeh"]="  host uptime/chargement moyen     : "
+ ["status_particldip"]="  particld bind addresse ip        : "
+ ["status_particldve"]="  particld version                 : "
+    ["status_uptodat"]="  particld à jour                  : "
+    ["status_running"]="  particld en cours d'execution    : "
+    ["status_uptimed"]="  particld date et heure           : "
+    ["status_drespon"]="  particld répond            (RPC) : "
+    ["status_dlisten"]="  particld écoute             (IP) : "
+    ["status_dportop"]="  particld port ouvert (P2P 51738) : "
+    ["status_dconnec"]="  particld connecting      (peers) : "
+    ["status_dconcnt"]="  particld nombre de connexion     : "
+    ["status_dblsync"]="  particld blocs synchronisés      : "
+    ["status_dbllast"]="  dernier bloc    (local particld) : "
+    ["status_webpart"]="             (explorer.particl.io) : "
+    ["status_webchai"]="                          (chainz) : "
+
+    ["status_dcurdif"]="  particld diff actuelle du réseau : "
+
+
+
+    ["status_stakeen"]="  particld staking activé          : "
+    ["status_stakecu"]="  particld staking actuellemnt?    : "
+    ["status_stakedi"]="  particld staking difficulté      : "
+    ["status_stakenw"]="  particld staking network weight  : "
+    ["status_stakeww"]="  particld staking wallet weight   : "
+    ["status_stakebl"]="  particld coldstaking balance     : "
+
+    ["ago"]=" ago"
+    ["found"]="trouvé."
+    ["breakline"]=""
+
+    ["stakingnode_init_walletcheck"]="Vérification du porte-feuille ... "
+    ["stakingnode_init_walletgenerate"]="recovery phrase : "
+    ["stakingnode_init_walletcreate"]="Création d'un porte-feuille ... "
+    ["stakingnode_new_publickey"]="Création d'une nouvelle clé publique de cold staking ... "
+    ["stakingnode_reward_check"]="Vérification de la configuration de l'adresse existante de réception des gains ... "
+    ["stakingnode_reward_address"]="Configuration de l'adresse de réception des gains ... "
+    ["stakingnode_reward_found"]="Adresse actuelle de réception des gains : "
+
+    ["stakingnode_stats_daily"]="Statistiques sur le mois actuel ... "
+    ["stakingnode_stats_monthly"]="Statistiques pour l'année entière ... "
+    ["stakingnode_stats_indent"]="   "
+
+    ["firewall_status"]="Vérification de l'état du pare-feu ..."
+    ["firewall_configure"]="Configuration du pare-feu ..."
+    ["firewall_report"]="Génération d'un rapport concernant l'état du pare-feu ..."
+
+)
